@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Panduan Pemasangan Prostream - Terima Kasih</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #8b5cf6;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --dark-bg: #0f172a;
+            --dark-card: #1e293b;
+            --light-bg: #f8fafc;
+            --light-card: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+            overflow-x: hidden;
+        }
+
+        body.dark-mode {
+            --light-bg: #0f172a;
+            --light-card: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --border-color: #334155;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        /* Mobile Theme Toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            z-index: 1000;
+            background: var(--light-card);
+            border-radius: 50px;
+            padding: 8px 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .theme-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Mobile Header */
+        .header {
+            background: var(--light-card);
+            border-radius: 15px;
+            padding: 25px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            animation: slideDown 0.6s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .thank-you {
+            font-size: 1.8rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Mobile Product Info */
+        .product-info {
+            background: var(--light-card);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            color: var(--text-primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            color: var(--primary-color);
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .app-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .app-card:active {
+            transform: scale(0.95);
+        }
+
+        .app-icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .app-name {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        /* Mobile Video Section - FULL SCREEN */
+        .video-section {
+            background: var(--light-card);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            background: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+        }
+
+        .video-controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .video-button {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .video-button:active {
+            transform: scale(0.95);
+        }
+
+        .fullscreen-btn {
+            background: linear-gradient(135deg, var(--success-color), #059669);
+        }
+
+        /* Mobile Download Codes */
+        .codes-section {
+            background: var(--light-card);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .codes-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .code-card {
+            background: var(--light-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .code-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .code-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+
+        .code-value {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            font-family: 'Courier New', monospace;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .copy-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .copy-btn:active {
+            transform: scale(0.95);
+        }
+
+        .copy-btn.copied {
+            background: var(--success-color);
+        }
+
+        /* Mobile Instructions */
+        .instructions {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            border-left: 4px solid var(--warning-color);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .instructions h4 {
+            color: #92400e;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;
+        }
+
+        .instructions ul {
+            color: #78350f;
+            margin-left: 20px;
+        }
+
+        .instructions li {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Support */
+        .support-section {
+            background: var(--light-card);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #25d366;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .whatsapp-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Mobile Footer */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            color: white;
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--success-color);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* Fullscreen Video Overlay */
+        .video-fullscreen-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: 9999;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-fullscreen-overlay.active {
+            display: flex;
+        }
+
+        .fullscreen-video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .close-fullscreen {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.9);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .close-fullscreen:active {
+            transform: scale(0.9);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 5px;
+            }
+            
+            .thank-you {
+                font-size: 1.5rem;
+            }
+            
+            .apps-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            
+            .app-card {
+                padding: 12px;
+            }
+            
+            .video-section {
+                padding: 15px;
+            }
+            
+            .video-container {
+                border-radius: 10px;
+            }
+            
+            .section-title {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .thank-you {
+                font-size: 1.3rem;
+            }
+            
+            .subtitle {
+                font-size: 0.9rem;
+            }
+            
+            .apps-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .app-icon {
+                font-size: 1.5rem;
+            }
+            
+            .app-name {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Landscape mode optimizations */
+        @media (orientation: landscape) and (max-height: 500px) {
+            .header {
+                padding: 15px 10px;
+            }
+            
+            .thank-you {
+                font-size: 1.2rem;
+                margin-bottom: 5px;
+            }
+            
+            .subtitle {
+                font-size: 0.8rem;
+            }
+            
+            .section-title {
+                font-size: 1rem;
+            }
+            
+            .video-section {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-moon" id="themeIcon"></i>
+        <span style="font-size: 0.8rem;">Tema</span>
+    </div>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="thank-you">
+                <i class="fas fa-heart"></i> Terima Kasih!
+            </h1>
+            <p class="subtitle">Selamat datang ke keluarga Prostream</p>
+        </header>
+
+        <!-- Product Info Section -->
+        <section class="product-info">
+            <h2 class="section-title">
+                <i class="fas fa-box"></i> Aplikasi Anda
+            </h2>
+            <p style="color: var(--text-secondary); margin-bottom: 15px; font-size: 0.9rem;">
+                4 aplikasi premium untuk ganti langsung:
+            </p>
+            <div class="apps-grid">
+                <div class="app-card">
+                    <div class="app-icon">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="app-name">MOVIE+DRAMA</div>
+                </div>
+                <div class="app-card">
+                    <div class="app-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="app-name">MOVIE LAGI</div>
+                </div>
+                <div class="app-card">
+                    <div class="app-icon">
+                        <i class="fas fa-satellite"></i>
+                    </div>
+                    <div class="app-name">ANIME</div>
+                </div>
+                <div class="app-card">
+                    <div class="app-icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <div class="app-name">ASTRO & LIVETV</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Tutorial Section -->
+        <section class="video-section">
+            <h2 class="section-title">
+                <i class="fas fa-video"></i> Tutorial Pemasangan
+            </h2>
+            <p style="color: var(--text-secondary); margin-bottom: 15px; font-size: 0.9rem;">
+                Ikuti video ini untuk pasang aplikasi
+            </p>
+            <div class="video-container">
+                <iframe 
+                    id="tutorialVideo"
+                    src="https://www.youtube.com/embed/w4ELKCeTKFI?rel=0&modestbranding=1" 
+                    title="Tutorial Pemasangan Prostream"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-controls">
+                <button class="video-button" onclick="playVideo()">
+                    <i class="fas fa-play-circle"></i> Main Video
+                </button>
+                <button class="video-button fullscreen-btn" onclick="enterFullscreen()">
+                    <i class="fas fa-expand"></i> Fullscreen
+                </button>
+            </div>
+        </section>
+
+        <!-- Download Codes Section -->
+        <section class="codes-section">
+            <h2 class="section-title">
+                <i class="fas fa-download"></i> Kod Muat Turun
+            </h2>
+            <p style="color: var(--text-secondary); margin-bottom: 15px; font-size: 0.9rem;">
+                Gunakan kod ini di Apps downloader TV:
+            </p>
+            <div class="codes-grid">
+                <div class="code-card">
+                    <div class="code-label">Prostream-1 (MOVIE)</div>
+                    <div class="code-value">
+                        <span id="code1">9496246</span>
+                        <button class="copy-btn" onclick="copyCode('code1', this)">
+                            <i class="fas fa-copy"></i> Salin
+                        </button>
+                    </div>
+                </div>
+                <div class="code-card">
+                    <div class="code-label">Prostream-2 (MOVIE)</div>
+                    <div class="code-value">
+                        <span id="code2">7805566</span>
+                        <button class="copy-btn" onclick="copyCode('code2', this)">
+                            <i class="fas fa-copy"></i> Salin
+                        </button>
+                    </div>
+                </div>
+                <div class="code-card">
+                    <div class="code-label">Prostream-3 (ANIME)</div>
+                    <div class="code-value">
+                        <span id="code3">4634516</span>
+                        <button class="copy-btn" onclick="copyCode('code3', this)">
+                            <i class="fas fa-copy"></i> Salin
+                        </button>
+                    </div>
+                </div>
+                <div class="code-card">
+                    <div class="code-label">Prostream-4 (TV+ASTRO) (BONUS FREE)</div>
+                    <div class="code-value">
+                        <span id="code4">6791590</span>
+                        <button class="copy-btn" onclick="copyCode('code4', this)">
+                            <i class="fas fa-copy"></i> Salin
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="instructions">
+                <h4>
+                    <i class="fas fa-exclamation-triangle"></i> 
+                    Panduan Penting
+                </h4>
+                <ul>
+                    <li>Masukkan kod yang betul di Apps downloader TV</li>
+                    <li>Semak internet sebelum mula</li>
+                    <li>WhatsApp kami jika ada masalah</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section class="support-section">
+            <h2 class="section-title" style="justify-content: center;">
+                <i class="fas fa-headset"></i> Bantuan?
+            </h2>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                Ada masalah? Hubungi kami segera
+            </p>
+            <a href="http://wasap.my/601127412402" target="_blank" class="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i>
+                WhatsApp
+            </a>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Prostream</p>
+            <p>Dibuat dengan <i class="fas fa-heart" style="color: #ff6b6b;"></i></p>
+        </footer>
+    </div>
+
+    <!-- Fullscreen Video Overlay -->
+    <div class="video-fullscreen-overlay" id="fullscreenOverlay">
+        <button class="close-fullscreen" onclick="exitFullscreen()">
+            <i class="fas fa-times"></i>
+        </button>
+        <iframe 
+            id="fullscreenVideo"
+            src="https://www.youtube.com/embed/w4ELKCeTKFI?autoplay=1&rel=0&modestbranding=1" 
+            title="Tutorial Pemasangan Prostream"
+            class="fullscreen-video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i> Kod disalin!
+    </div>
+
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('themeIcon');
+            
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Load saved theme
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            const themeIcon = document.getElementById('themeIcon');
+            
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
+        });
+
+        // Copy Code Function
+        function copyCode(codeId, button) {
+            const codeElement = document.getElementById(codeId);
+            const codeText = codeElement.textContent;
+            
+            navigator.clipboard.writeText(codeText).then(() => {
+                // Change button appearance
+                button.classList.add('copied');
+                button.innerHTML = '<i class="fas fa-check"></i> Disalin';
+                
+                // Show toast notification
+                showToast();
+                
+                // Reset button after 2 seconds
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                    button.innerHTML = '<i class="fas fa-copy"></i> Salin';
+                }, 2000);
+            });
+        }
+
+        // Show Toast Notification
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Play Video Function
+        function playVideo() {
+            const iframe = document.getElementById('tutorialVideo');
+            const currentSrc = iframe.src;
+            
+            // Add autoplay parameter
+            if (!currentSrc.includes('autoplay=1')) {
+                iframe.src = currentSrc + '&autoplay=1';
+            }
+            
+            // Scroll to video
+            document.querySelector('.video-section').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'center'
+            });
+        }
+
+        // Fullscreen Functions
+        function enterFullscreen() {
+            const overlay = document.getElementById('fullscreenOverlay');
+            const fullscreenVideo = document.getElementById('fullscreenVideo');
+            
+            // Show fullscreen overlay
+            overlay.classList.add('active');
+            
+            // Auto-rotate to landscape if mobile
+            if (screen.orientation && screen.orientation.lock) {
+                screen.orientation.lock('landscape').catch(err => {
+                    console.log('Orientation lock failed:', err);
+                });
+            }
+            
+            // Play video in fullscreen
+            fullscreenVideo.src = 'https://www.youtube.com/embed/w4ELKCeTKFI?autoplay=1&rel=0&modestbranding=1';
+            
+            // Prevent scrolling
+            document.body.style.overflow = 'hidden';
+        }
+
+        function exitFullscreen() {
+            const overlay = document.getElementById('fullscreenOverlay');
+            const fullscreenVideo = document.getElementById('fullscreenVideo');
+            
+            // Hide fullscreen overlay
+            overlay.classList.remove('active');
+            
+            // Stop video
+            fullscreenVideo.src = 'https://www.youtube.com/embed/w4ELKCeTKFI?rel=0&modestbranding=1';
+            
+            // Restore orientation
+            if (screen.orientation && screen.orientation.unlock) {
+                screen.orientation.unlock();
+            }
+            
+            // Restore scrolling
+            document.body.style.overflow = '';
+        }
+
+        // Handle escape key for fullscreen
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                exitFullscreen();
+            }
+        });
+
+        // Handle device orientation change
+        window.addEventListener('orientationchange', () => {
+            if (window.orientation === 0 || window.orientation === 180) {
+                // Portrait mode - exit fullscreen
+                exitFullscreen();
+            }
+        });
+
+        // Add touch feedback for mobile
+        document.querySelectorAll('button, .app-card, .code-card').forEach(element => {
+            element.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.95)';
+            });
+            
+            element.addEventListener('touchend', function() {
+                this.style.transform = '';
+            });
+        });
+
+        // Optimize scrolling for mobile
+        let isScrolling = false;
+        window.addEventListener('scroll', () => {
+            if (!isScrolling) {
+                window.requestAnimationFrame(() => {
+                    // Add scroll-based animations if needed
+                    isScrolling = false;
+                });
+                isScrolling = true;
+            }
+        });
+
+        // Prevent zoom on double tap
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', (e) => {
+            const now = Date.now();
+            if (now - lastTouchEnd <= 300) {
+                e.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+
+        // Add smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Check if mobile and optimize
+        function isMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        // Mobile optimizations
+        if (isMobile()) {
+            // Add mobile-specific optimizations
+            document.querySelector('.video-container').style.cursor = 'pointer';
+            
+            // Add click to play on mobile
+            document.querySelector('.video-container').addEventListener('click', playVideo);
+        }
+    </script>
+</body>
+</html>
