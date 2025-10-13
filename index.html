@@ -51,7 +51,7 @@
             padding: 10px;
         }
 
-        /* Mobile Theme Toggle */
+        /* Theme Toggle */
         .theme-toggle {
             position: fixed;
             top: 15px;
@@ -74,7 +74,7 @@
             box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
 
-        /* Mobile Header */
+        /* Header */
         .header {
             background: var(--light-card);
             border-radius: 15px;
@@ -111,7 +111,7 @@
             line-height: 1.5;
         }
 
-        /* Mobile Product Info */
+        /* Product Info */
         .product-info {
             background: var(--light-card);
             border-radius: 15px;
@@ -174,14 +174,13 @@
             font-weight: bold;
         }
 
-        /* Mobile Video Section - FULL SCREEN */
+        /* Video Section - ENLARGED & MINIMAL BORDER */
         .video-section {
             background: var(--light-card);
             border-radius: 15px;
-            padding: 20px;
+            padding: 15px;
             margin-bottom: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            position: relative;
         }
 
         .video-container {
@@ -190,8 +189,8 @@
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
             background: #000;
         }
 
@@ -202,42 +201,10 @@
             width: 100%;
             height: 100%;
             border: none;
-            border-radius: 12px;
+            border-radius: 8px;
         }
 
-        .video-controls {
-            display: flex;
-            gap: 10px;
-            margin-top: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .video-button {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 12px 25px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .video-button:active {
-            transform: scale(0.95);
-        }
-
-        .fullscreen-btn {
-            background: linear-gradient(135deg, var(--success-color), #059669);
-        }
-
-        /* Mobile Download Codes */
+        /* Download Codes */
         .codes-section {
             background: var(--light-card);
             border-radius: 15px;
@@ -311,7 +278,7 @@
             background: var(--success-color);
         }
 
-        /* Mobile Instructions */
+        /* Instructions */
         .instructions {
             background: linear-gradient(135deg, #fef3c7, #fde68a);
             border-left: 4px solid var(--warning-color);
@@ -339,7 +306,7 @@
             font-size: 0.9rem;
         }
 
-        /* Mobile Support */
+        /* Support */
         .support-section {
             background: var(--light-card);
             border-radius: 15px;
@@ -367,7 +334,7 @@
             transform: scale(0.95);
         }
 
-        /* Mobile Footer */
+        /* Footer */
         .footer {
             text-align: center;
             padding: 15px;
@@ -398,53 +365,6 @@
             transform: translateX(-50%) translateY(0);
         }
 
-        /* Fullscreen Video Overlay */
-        .video-fullscreen-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #000;
-            z-index: 9999;
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .video-fullscreen-overlay.active {
-            display: flex;
-        }
-
-        .fullscreen-video {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        .close-fullscreen {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: rgba(255,255,255,0.9);
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            font-size: 1.5rem;
-            cursor: pointer;
-            z-index: 10000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .close-fullscreen:active {
-            transform: scale(0.9);
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
@@ -465,15 +385,15 @@
             }
             
             .video-section {
-                padding: 15px;
-            }
-            
-            .video-container {
-                border-radius: 10px;
+                padding: 10px;
             }
             
             .section-title {
                 font-size: 1.2rem;
+            }
+
+            .video-container {
+                border-radius: 6px;
             }
         }
 
@@ -496,6 +416,14 @@
             
             .app-name {
                 font-size: 0.9rem;
+            }
+
+            .video-section {
+                padding: 8px;
+            }
+
+            .video-container {
+                border-radius: 4px;
             }
         }
 
@@ -520,6 +448,7 @@
             
             .video-section {
                 margin-bottom: 10px;
+                padding: 8px;
             }
         }
     </style>
@@ -546,7 +475,7 @@
                 <i class="fas fa-box"></i> Aplikasi Anda
             </h2>
             <p style="color: var(--text-secondary); margin-bottom: 15px; font-size: 0.9rem;">
-                4 aplikasi premium untuk ganti langsung:
+                4 aplikasi premium :
             </p>
             <div class="apps-grid">
                 <div class="app-card">
@@ -571,35 +500,26 @@
                     <div class="app-icon">
                         <i class="fas fa-tv"></i>
                     </div>
-                    <div class="app-name">ASTRO & LIVETV</div>
+                    <div class="app-name">LIVE TV+ASTRO (FREE)</div>
                 </div>
             </div>
         </section>
 
-        <!-- Video Tutorial Section -->
+        <!-- Video Tutorial Section - NO BUTTONS -->
         <section class="video-section">
             <h2 class="section-title">
                 <i class="fas fa-video"></i> Tutorial Pemasangan
             </h2>
             <p style="color: var(--text-secondary); margin-bottom: 15px; font-size: 0.9rem;">
-                Ikuti video ini untuk pasang aplikasi
+                Ikuti video ini untuk pasang aplikasi. Gunakan fullscreen icon di video untuk tonton skrin penuh.
             </p>
             <div class="video-container">
                 <iframe 
-                    id="tutorialVideo"
                     src="https://www.youtube.com/embed/w4ELKCeTKFI?rel=0&modestbranding=1" 
                     title="Tutorial Pemasangan Prostream"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     allowfullscreen>
                 </iframe>
-            </div>
-            <div class="video-controls">
-                <button class="video-button" onclick="playVideo()">
-                    <i class="fas fa-play-circle"></i> Main Video
-                </button>
-                <button class="video-button fullscreen-btn" onclick="enterFullscreen()">
-                    <i class="fas fa-expand"></i> Fullscreen
-                </button>
             </div>
         </section>
 
@@ -640,7 +560,7 @@
                     </div>
                 </div>
                 <div class="code-card">
-                    <div class="code-label">Prostream-4 (TV+ASTRO) (BONUS FREE)</div>
+                    <div class="code-label">Prostream-4 (LIVE TV+ ASTRO) (BONUS FREE)</div>
                     <div class="code-value">
                         <span id="code4">6791590</span>
                         <button class="copy-btn" onclick="copyCode('code4', this)">
@@ -682,21 +602,6 @@
             <p>&copy; 2024 Prostream</p>
             <p>Dibuat dengan <i class="fas fa-heart" style="color: #ff6b6b;"></i></p>
         </footer>
-    </div>
-
-    <!-- Fullscreen Video Overlay -->
-    <div class="video-fullscreen-overlay" id="fullscreenOverlay">
-        <button class="close-fullscreen" onclick="exitFullscreen()">
-            <i class="fas fa-times"></i>
-        </button>
-        <iframe 
-            id="fullscreenVideo"
-            src="https://www.youtube.com/embed/w4ELKCeTKFI?autoplay=1&rel=0&modestbranding=1" 
-            title="Tutorial Pemasangan Prostream"
-            class="fullscreen-video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
-        </iframe>
     </div>
 
     <!-- Toast Notification -->
@@ -766,79 +671,6 @@
             }, 3000);
         }
 
-        // Play Video Function
-        function playVideo() {
-            const iframe = document.getElementById('tutorialVideo');
-            const currentSrc = iframe.src;
-            
-            // Add autoplay parameter
-            if (!currentSrc.includes('autoplay=1')) {
-                iframe.src = currentSrc + '&autoplay=1';
-            }
-            
-            // Scroll to video
-            document.querySelector('.video-section').scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'center'
-            });
-        }
-
-        // Fullscreen Functions
-        function enterFullscreen() {
-            const overlay = document.getElementById('fullscreenOverlay');
-            const fullscreenVideo = document.getElementById('fullscreenVideo');
-            
-            // Show fullscreen overlay
-            overlay.classList.add('active');
-            
-            // Auto-rotate to landscape if mobile
-            if (screen.orientation && screen.orientation.lock) {
-                screen.orientation.lock('landscape').catch(err => {
-                    console.log('Orientation lock failed:', err);
-                });
-            }
-            
-            // Play video in fullscreen
-            fullscreenVideo.src = 'https://www.youtube.com/embed/w4ELKCeTKFI?autoplay=1&rel=0&modestbranding=1';
-            
-            // Prevent scrolling
-            document.body.style.overflow = 'hidden';
-        }
-
-        function exitFullscreen() {
-            const overlay = document.getElementById('fullscreenOverlay');
-            const fullscreenVideo = document.getElementById('fullscreenVideo');
-            
-            // Hide fullscreen overlay
-            overlay.classList.remove('active');
-            
-            // Stop video
-            fullscreenVideo.src = 'https://www.youtube.com/embed/w4ELKCeTKFI?rel=0&modestbranding=1';
-            
-            // Restore orientation
-            if (screen.orientation && screen.orientation.unlock) {
-                screen.orientation.unlock();
-            }
-            
-            // Restore scrolling
-            document.body.style.overflow = '';
-        }
-
-        // Handle escape key for fullscreen
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                exitFullscreen();
-            }
-        });
-
-        // Handle device orientation change
-        window.addEventListener('orientationchange', () => {
-            if (window.orientation === 0 || window.orientation === 180) {
-                // Portrait mode - exit fullscreen
-                exitFullscreen();
-            }
-        });
-
         // Add touch feedback for mobile
         document.querySelectorAll('button, .app-card, .code-card').forEach(element => {
             element.addEventListener('touchstart', function() {
@@ -848,18 +680,6 @@
             element.addEventListener('touchend', function() {
                 this.style.transform = '';
             });
-        });
-
-        // Optimize scrolling for mobile
-        let isScrolling = false;
-        window.addEventListener('scroll', () => {
-            if (!isScrolling) {
-                window.requestAnimationFrame(() => {
-                    // Add scroll-based animations if needed
-                    isScrolling = false;
-                });
-                isScrolling = true;
-            }
         });
 
         // Prevent zoom on double tap
@@ -895,9 +715,6 @@
         if (isMobile()) {
             // Add mobile-specific optimizations
             document.querySelector('.video-container').style.cursor = 'pointer';
-            
-            // Add click to play on mobile
-            document.querySelector('.video-container').addEventListener('click', playVideo);
         }
     </script>
 </body>
